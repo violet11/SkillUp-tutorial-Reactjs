@@ -1,6 +1,7 @@
 import { FC, ReactNode } from 'react'
 import Footer from './Footer'
 import Navbar from './Navbar'
+import Dashboard from 'pages/Dashboard'
 
 interface Props {
   children: ReactNode | ReactNode[]

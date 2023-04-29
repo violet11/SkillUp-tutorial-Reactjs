@@ -1,5 +1,6 @@
 import Layout from 'components/ui/Layout'
 import { FC } from 'react'
+import Dashboard from './Dashboard'
 
 const Home: FC = () => {
   return (

@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom'
 import { routes } from 'constants/routesConstants'
 import Avatar from 'react-avatar'
 import Button from 'react-bootstrap/Button'
+import { observer } from 'mobx-react'
 
 const Topbar: FC = () => {
   const { isMobile } = useMediaQuery(768)
@@ -122,4 +123,4 @@ const Topbar: FC = () => {
   )
 }
 
-export default Topbar
+export default observer(Topbar)

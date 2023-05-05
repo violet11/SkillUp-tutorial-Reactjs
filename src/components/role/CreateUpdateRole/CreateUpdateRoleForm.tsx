@@ -164,7 +164,7 @@ const CreateUpdateLoginForm: FC<Props> = ({ defaultValues }) => {
                   value={permission.id}
                   defaultChecked={permission.defaultChecked}
                 />
-                <label>{permission.name} test</label>
+                <label>{permission.name}</label>
               </div>
             ),
           )}

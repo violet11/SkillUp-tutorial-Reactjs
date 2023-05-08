@@ -45,7 +45,6 @@ const DashboardOrders: FC = () => {
       },
     )
 
-    const blob = new Blob([data], { type: 'text/csv' })
     const url = window.URL.createObjectURL(data)
     const link = document.createElement('a')
     link.href = url

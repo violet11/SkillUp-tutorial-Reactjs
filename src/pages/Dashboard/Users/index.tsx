@@ -19,7 +19,7 @@ const DashboardUsers: FC = () => {
   const { isMobile } = useMediaQuery(768)
   const [pageNumber, setPageNumber] = useState(1)
 
-  const { data, isLoading, refetch } = useQuery(
+  const { data, isLoading, refetch, isError } = useQuery(
     ['fetchUsers', pageNumber],
     () => API.fetchUsers(pageNumber),
     {
@@ -65,6 +65,8 @@ const DashboardUsers: FC = () => {
       </div>
       {isLoading ? (
         <div>Loading...</div>
+      ) : data?.data.statusCode === 403 ? (
+        <div>Dostop zavrnjen</div>
       ) : (
         <>
           {data?.data.data.length === 0 ? (
